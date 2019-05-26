@@ -2,11 +2,13 @@
 		var currentQuestion;
         var num_Of_Questions=0;
         var questions;
+        /*back function*/
         function BackToHome()
         {
             localStorage.setItem("ChangeUserName",true);
             window.location.href = "HomePage.html";
         }
+        /*Get the questions from the api , and creating the quiz*/
 		$(document).ready(function(){
 			$.ajax({
 				url: "https://opentdb.com/api.php?amount=3&type=multiple",
@@ -36,7 +38,7 @@
 					console.log(err);
 				}
 			});
-			
+			/*Dealing with the correct and the incorrect answers */
 			$(document).on('click', '.answer', function(){
 				if($(this).hasClass('correct'))
                 {
@@ -53,6 +55,7 @@
                     alert('incorrect answer');
                 }
 			});
+            /*Loading the next questions and the answers */
 			function NextQuestion(index)
             {
                 $("#curr").html(questions[index].question);
