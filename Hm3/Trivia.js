@@ -48,7 +48,7 @@
                         NextQuestion(num_Of_Questions);
                     }
                     else{
-                        window.location.href = "Jokes.hml";
+                        window.location.href = "Jokes.html";
                     }
 				}
                 else{
