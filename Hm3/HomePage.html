@@ -3,8 +3,11 @@
 
 <head>
     <title>Login Page</title>
+    /* linking with JS file  */  
     <script src="HomePage.js"></script>
+    /* linking with JQuery  */  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    /* linking with external css  */
     <link rel="stylesheet" type="text/css" href="HomePage.css">
 </head>
 
@@ -33,6 +36,9 @@
         </div>
     </div>
     <script>
+        /*
+            Started when the page is loaded and using LocalStorage 
+        */
         $(document).ready(function () {
             if (localStorage.getItem("userName")) {
                 if(localStorage.getItem("ChangeUserName") == "false"){
